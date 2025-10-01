@@ -1,9 +1,75 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="28.2.5">
   <diagram name="Page-1" id="a2c38tTJGNN4nqVLcID5">
-    <mxGraphModel>
+    <mxGraphModel dx="751" dy="1636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="jluJvv0loymhEcwhU8Ki-1" value="Warehouse&amp;nbsp;&lt;div&gt;- String id&amp;nbsp;&lt;/div&gt;&lt;div&gt;- String name&amp;nbsp;&lt;/div&gt;&lt;div&gt;- Map&amp;lt;String, Product&amp;gt; products&lt;/div&gt;&lt;div&gt;----------&lt;/div&gt;&lt;div&gt;- addProduct(product,count)&lt;/div&gt;&lt;div&gt;- removeProduct(product, count)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="260" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="jluJvv0loymhEcwhU8Ki-2" value="Requirements-&amp;nbsp;&lt;div&gt;1. Multiple warehouses have multiple products&amp;nbsp;&lt;/div&gt;&lt;div&gt;2. Products of all categories have product info and count&amp;nbsp;&lt;/div&gt;&lt;div&gt;3. Products can be added/removed from warehouse&amp;nbsp;&lt;/div&gt;&lt;div&gt;4. Alerts should be triggered if product count is below threshold&amp;nbsp;&lt;/div&gt;&lt;div&gt;5. Different mechanisms to refill products&amp;nbsp;&lt;/div&gt;&lt;div&gt;generate inventory report&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="-100" width="630" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="jluJvv0loymhEcwhU8Ki-3" value="Product&lt;div&gt;- String id&lt;/div&gt;&lt;div&gt;- String name&amp;nbsp;&lt;/div&gt;&lt;div&gt;- ProductCategory category&amp;nbsp;&lt;/div&gt;&lt;div&gt;- int count&amp;nbsp;&lt;/div&gt;&lt;div&gt;- int price&amp;nbsp;&lt;/div&gt;&lt;div&gt;- int threshold&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="200" width="260" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="jluJvv0loymhEcwhU8Ki-4" value="ProductCategory&lt;div&gt;- GROCERY,&lt;/div&gt;&lt;div&gt;- ELECTRONICS,&lt;/div&gt;&lt;div&gt;- CLOTHING,&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="220" width="190" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="jluJvv0loymhEcwhU8Ki-5" value="InventoryManager&amp;nbsp;&lt;div&gt;- Map&amp;lt;String, Warehouse&amp;gt; warehouses&lt;/div&gt;&lt;div&gt;- private static instance&amp;nbsp;&lt;/div&gt;&lt;div&gt;- ProductFactory productFactory&lt;/div&gt;&lt;div&gt;- List&amp;lt;InventoryObserver&amp;gt; observers&lt;/div&gt;&lt;div&gt;- ReplenishmentStrategy strategy&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;-----------&lt;/div&gt;&lt;div&gt;- static InventoryManager getInstance()&lt;/div&gt;&lt;div&gt;- Product createProduct(productCategory,name)&lt;/div&gt;&lt;div&gt;- addProductToWarehouse(Product, Warehouse)&lt;/div&gt;&lt;div&gt;- removeProductFromWarehouse(Product, warehouse)&lt;/div&gt;&lt;div&gt;- notifyIfLess(Product, Warehouse)&lt;/div&gt;&lt;div&gt;- replenishProduct(Product, Warehouse)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="500" width="390" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="jluJvv0loymhEcwhU8Ki-6" value="ProductFactory&lt;div&gt;- createProduct(ProductCategory, name,price,count...)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="80" width="420" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jluJvv0loymhEcwhU8Ki-9" value="InventoryObserver&lt;div&gt;- notifyObserver(Product, Warehouse)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="540" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jluJvv0loymhEcwhU8Ki-10" value="StockObserver&lt;div&gt;- notifyObserver()&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="670" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jluJvv0loymhEcwhU8Ki-11" value="ReportObserver&lt;div&gt;- notifyObserver()&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1155" y="670" width="195" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="jluJvv0loymhEcwhU8Ki-12" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1140" y="610" as="sourcePoint" />
+            <mxPoint x="1060" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jluJvv0loymhEcwhU8Ki-13" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1180" y="610" as="sourcePoint" />
+            <mxPoint x="1250" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jluJvv0loymhEcwhU8Ki-14" value="ReplenishmentStrategy&lt;div&gt;- replenishProduct(Product)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="880" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jluJvv0loymhEcwhU8Ki-15" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="jluJvv0loymhEcwhU8Ki-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="430" y="950" as="sourcePoint" />
+            <mxPoint x="330" y="1020" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jluJvv0loymhEcwhU8Ki-16" value="GeoReplenishmentStrategy&lt;div&gt;- replenishProduct(Product)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="1020" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jluJvv0loymhEcwhU8Ki-19" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="jluJvv0loymhEcwhU8Ki-20">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="950" as="sourcePoint" />
+            <mxPoint x="630" y="1010" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jluJvv0loymhEcwhU8Ki-20" value="ProductCategoryReplenishStrategy&lt;div&gt;- replenishProduct(product)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="1010" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jluJvv0loymhEcwhU8Ki-21" value="InventoryReportGenerator&lt;div&gt;- InventoryManager manager&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;------&lt;/div&gt;&lt;div&gt;- generateReport()&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="660" width="210" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="jluJvv0loymhEcwhU8Ki-22" value="InventoryOperations&lt;div&gt;- ADD,&lt;/div&gt;&lt;div&gt;- REMOVE,&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="370" width="130" height="110" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
