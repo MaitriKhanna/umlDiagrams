@@ -1,9 +1,126 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.0.2">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.2.9">
   <diagram name="Page-1" id="MqDN-ZKXpv-uFJxH8i2H">
-    <mxGraphModel>
+    <mxGraphModel dx="2065" dy="697" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Building&amp;nbsp;&lt;div&gt;- List&amp;lt;Floor&amp;gt; floors&lt;/div&gt;&lt;div&gt;- ElevatorSystem system&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="190" x="80" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Floor&amp;nbsp;&lt;div&gt;- int floorNumber&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="100" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Elevator&amp;nbsp;&lt;div&gt;- int elevatorId&lt;/div&gt;&lt;div&gt;- int capacity&amp;nbsp;&lt;/div&gt;&lt;div&gt;- int currentFloor&lt;/div&gt;&lt;div&gt;- Direction currentDir&lt;/div&gt;&lt;div&gt;-&amp;nbsp; PriorityQueue&amp;lt;Request&amp;gt; upRequests&lt;/div&gt;&lt;div&gt;- PriorityQueue&amp;lt;Request&amp;gt; downRequests&lt;/div&gt;&lt;div&gt;- ElevatorState state&lt;/div&gt;&lt;div&gt;- List&amp;lt;ElevatorObserver&amp;gt; observers&lt;/div&gt;&lt;div&gt;- ElevatorMovementStrategy strategy&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- notifyObservers()&lt;/div&gt;&lt;div&gt;- addRequest(Request)&lt;/div&gt;&lt;div&gt;- move()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="340" width="360" x="360" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Direction&amp;nbsp;&lt;div&gt;UP,&lt;/div&gt;&lt;div&gt;DOWN,&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="840" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Request&lt;div&gt;- int currentFloor&lt;/div&gt;&lt;div&gt;- int targetFloor&lt;/div&gt;&lt;div&gt;- Direction direction&lt;/div&gt;&lt;div&gt;- RequestType type&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="170" x="840" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="RequestType&lt;div&gt;EXTERNAL,&lt;/div&gt;&lt;div&gt;INTERNAL,&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="1080" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="ElevatorState&lt;div&gt;- addRequest(Elevator, Request)&lt;/div&gt;&lt;div&gt;- move(Elevator)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="340" x="500" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="IdleState" vertex="1">
+          <mxGeometry height="60" width="145" x="305" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="MovingUpState" vertex="1">
+          <mxGeometry height="50" width="120" x="530" y="695" as="geometry" />
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="MovingDownState" vertex="1">
+          <mxGeometry height="60" width="120" x="720" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="MaintenenceState" vertex="1">
+          <mxGeometry height="60" width="120" x="900" y="695" as="geometry" />
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-13" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="520" y="640" as="sourcePoint" />
+            <mxPoint x="370" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-14" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="610" y="640" as="sourcePoint" />
+            <mxPoint x="580" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-15" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="680" y="640" as="sourcePoint" />
+            <mxPoint x="720" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-16" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="820" y="640" as="sourcePoint" />
+            <mxPoint x="930" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="ElevatorObserver&lt;div&gt;- notify(Elevator)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="190" x="1200" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-18" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1300" y="600" as="sourcePoint" />
+            <mxPoint x="1300" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="DisplayObserver&lt;div&gt;- List&amp;lt;Display&amp;gt; boards&lt;/div&gt;&lt;div&gt;- notify(Elevator)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="220" x="1240" y="695" as="geometry" />
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Display&lt;div&gt;- int elevatorId&lt;/div&gt;&lt;div&gt;- int currentFloor&lt;/div&gt;&lt;div&gt;- Direction direction&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="1260" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="ElevatorMovementStrategy&lt;div&gt;- int returnNextFloor(Elevator)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="220" x="510" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="FCFS" vertex="1">
+          <mxGeometry height="60" width="180" x="440" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="NearestInDirection" vertex="1">
+          <mxGeometry height="60" width="150" x="690" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-24" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="670" y="920" as="sourcePoint" />
+            <mxPoint x="760" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-25" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="620" y="920" as="sourcePoint" />
+            <mxPoint x="540" y="950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-26" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="ElevatorSystem&amp;nbsp;&lt;div&gt;- List&amp;lt;Elevator&amp;gt; elevators&amp;nbsp;&lt;/div&gt;&lt;div&gt;- AssignmentStrategy strategy&amp;nbsp;&lt;/div&gt;&lt;div&gt;- ElevatorSystem instance&amp;nbsp;&lt;/div&gt;&lt;div&gt;ExecutorService executor&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- void assignRequest(Request)&lt;/div&gt;&lt;div&gt;- start()&lt;/div&gt;&lt;div&gt;- stop()&lt;/div&gt;&lt;div&gt;- getInstance()&lt;/div&gt;" vertex="1">
+          <mxGeometry height="240" width="310" x="-160" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-27" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="AssignmentStrategy&lt;div&gt;- Elevator getSuitableElevator(List&amp;lt;Elevator&amp;gt;, Request)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="280" x="-210" y="755" as="geometry" />
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-28" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="NearestElevatorStrategy&lt;div&gt;- Elevator getSuitableElevator(List&amp;lt;Elevator&amp;gt;, Request)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="280" x="-460" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-29" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="LeastRequestStrategy&lt;div&gt;- Elevator getSuitableElevator(List&amp;lt;Elevator&amp;gt;, Request)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="280" x="-100" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-30" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="20" y="820" as="sourcePoint" />
+            <mxPoint x="120" y="860" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SwN_YU_5_Aw8XXrPvfx-31" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-130" y="820" as="sourcePoint" />
+            <mxPoint x="-250" y="860" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
