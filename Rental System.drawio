@@ -1,0 +1,100 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.2.9">
+  <diagram name="Page-1" id="cjKPjC1OQTHM1l2cLkNo">
+    <mxGraphModel dx="1215" dy="697" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Abstract Vehicle&amp;nbsp;&lt;div&gt;- String id&lt;/div&gt;&lt;div&gt;- String name&lt;/div&gt;&lt;div&gt;- String registrationNumber&lt;/div&gt;&lt;div&gt;- VehicleType vehicleType&lt;/div&gt;&lt;div&gt;- int rentPrice&lt;/div&gt;&lt;div&gt;- VehicleStatus status&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="240" x="110" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="SuvVehicle" vertex="1">
+          <mxGeometry height="60" width="120" x="20" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="ElectricVehicle" vertex="1">
+          <mxGeometry height="60" width="120" x="180" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="LuxuryVehicle" vertex="1">
+          <mxGeometry height="60" width="120" x="330" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-5" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="150" y="410" as="sourcePoint" />
+            <mxPoint x="60" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-6" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="240" y="410" as="sourcePoint" />
+            <mxPoint x="210" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-7" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="320" y="410" as="sourcePoint" />
+            <mxPoint x="360" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="RentalStore&lt;div&gt;- String id&lt;br&gt;&lt;div&gt;- Map&amp;lt;String,Vehicle&amp;gt; vehicles&lt;/div&gt;&lt;div&gt;- String name&lt;/div&gt;&lt;div&gt;- String city&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="200" x="140" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="User&lt;div&gt;- String id&lt;/div&gt;&lt;div&gt;- String userName&lt;/div&gt;&lt;div&gt;- String licenseNumber&lt;/div&gt;&lt;div&gt;- List&amp;lt;Reservation&amp;gt; reservationList&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="250" x="670" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Reservation&lt;div&gt;- String id&lt;/div&gt;&lt;div&gt;- User user&amp;nbsp;&lt;/div&gt;&lt;div&gt;- Date startTime&lt;/div&gt;&lt;div&gt;- Date endTime&amp;nbsp;&lt;/div&gt;&lt;div&gt;- Vehicle vehicle&amp;nbsp;&lt;/div&gt;&lt;div&gt;- int amount&amp;nbsp;&lt;/div&gt;&lt;div&gt;- ReservationStatus status&lt;/div&gt;&lt;div&gt;- PriceCalculationStrategy&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="330" x="1010" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="ReservationManager&lt;div&gt;- Map&amp;lt;String, Reservation&amp;gt; reservationMap&lt;/div&gt;&lt;div&gt;-------------&lt;/div&gt;&lt;div&gt;- List&amp;lt;Vehicle&amp;gt; findAvailableVehicle(start,end,List&amp;lt;Vehicle&amp;gt;)&lt;/div&gt;&lt;div&gt;- Reservation createReservation(user,startTime,endTime, strategy)&lt;/div&gt;&lt;div&gt;-&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Reservation updateReservation()&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="310" x="1100" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="RentalSystem&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- RentalSystem instance&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Map&amp;lt;String, RentalStore&amp;gt; rentalStoreMap&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Map&amp;lt;String, User&amp;gt; userMap&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- ReservationManager manager&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- PaymentProcessor paymentProcessor&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-------------------------------&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- synchronized RentalSystem getInstance()&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- List&amp;lt;Vehicle&amp;gt; findAvailableVehicles(startTime, endTime)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- List&amp;lt;Vehicle&amp;gt; findAvailableVehInStore(startTime, endTime, rentalStore)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- synchronized Reservation createReservation(user,startTime,endTime,vehicle, PriceCalculationStrategy)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-synchronized Reservation cancelReservation(reservationId)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- synchronized Reservation modifyReservation(reservationId, startTime, endTime)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- processPayment(Reservation reservation)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="310" width="490" x="520" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="PaymentProcessor&lt;div&gt;- Bill processPayment(Reservation)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="325" x="705" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="DebitCardPaymentProcessor" vertex="1">
+          <mxGeometry height="60" width="220" x="510" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="CreditCardPaymentProcessor" vertex="1">
+          <mxGeometry height="60" width="250" x="830" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-17" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="760" y="940" as="sourcePoint" />
+            <mxPoint x="630" y="980" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-18" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="880" y="940" as="sourcePoint" />
+            <mxPoint x="980" y="990" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Bill&lt;div&gt;- int amount&amp;nbsp;&lt;/div&gt;&lt;div&gt;- boolean status&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="140" x="1180" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="VehicleStatus&lt;div&gt;- AVAILABLE,&lt;/div&gt;&lt;div&gt;- BOOKED,&amp;nbsp;&lt;/div&gt;&lt;div&gt;- MAINTAINENCE,&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="145" x="425" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="VehicleFactory&amp;nbsp;&lt;div&gt;- createVehicle(name,vehicleType, registrationNumber)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="230" x="110" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="PriceCalculationStrategy&lt;div&gt;- int calculateAmount(startTime,endTime,vehicle)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="300" x="1600" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-24" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" target="sJlP1W2Fk7SO-_VQHpBV-25" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1670" y="470" as="sourcePoint" />
+            <mxPoint x="1640" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-25" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="- SuvPriceStrategy&lt;div&gt;- int calculateAmount()&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="230" x="1580" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="sJlP1W2Fk7SO-_VQHpBV-26" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="ReservationStatus&lt;div&gt;- COMPLETED,&lt;/div&gt;&lt;div&gt;- CREATED,&lt;/div&gt;&lt;div&gt;- ACTIVE,&amp;nbsp;&lt;/div&gt;&lt;div&gt;CANCELLED,&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="250" x="1380" y="170" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
